@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Index</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<link rel="stylesheet" type="text/css" href="employee.css" />
+	</head>
+
+	<body>		
+		<h2>一覧画面</h2>
+		<form th:action="@{/search}" th:object="${serachForm}" method="post">
+			<div>
+				<label class="middleTite">検索条件</label>
+				<div class="middleBlock">
+					<div class="smallBlock">
+						<label>氏名(性)</label></br>
+						<input type="text" th:field="*{last_name}" class="textbox"/>
+					</div>
+					<div class="smallBlock">
+						<label>氏名(名)</label></br>
+						<input type="text" th:field="*{last_name}" class="textbox"/>
+					</div>
+				</div>
+				<div class="middleBlock">
+					<div class="smallBlock">
+						<label>年齢</label></br>
+						<input type="text" th:field="*{age}" class="textbox"/>
+					</div>
+					<div class="smallBlock">
+						<label>生年月日</label></br>
+						<input type="text" th:field="*{birthday}" class="textbox"/>
+					</div>
+				</div>
+				<input type="submit" value="検索" id="button" />
+			</div>
+		</form>
+		</br></br>
+		<label class="middleTite">従業員一覧</label>
+		<table border="1" width="80%">
+		   <tr>
+		     <th>氏名(性)</th>
+				 <th>氏名(名)</th>
+		     <th>年齢</th>
+				 <th>生年月日</th>
+				 <th>操作</th>
+		   </tr>
+		   <tr>
+		     <td>田中</td>
+				 <td>太郎</td>
+		     <td>27</td>
+				 <td>1998-01-02</td>
+				 <td class="tdButton">
+						<input type="submit" value="編集" id="button" class="button"/>
+						<input type="submit" value="削除" id="button" class="button"/>
+				 </td>
+		   </tr>
+		   <tr>
+		     <td>佐藤</td>
+				 <td>祐子</td>
+		     <td>42</td>
+				 <td>1987-03-04</td>
+				 <td class="tdButton">
+ 						<input type="submit" value="編集" id="button" class="button"/>
+ 						<input type="submit" value="削除" id="button" class="button"/>
+ 				 </td>
+		   </tr>
+		 </table>
+		
+<!--		<form th:action="@{/create}" th:object="${employee}" method="post">-->
+<!--					<label>Name</label>-->
+<!--					<p><input type="text" th:field="*{last_name}" /></p>-->
+					
+<!--					<label>Age</label>-->
+<!--					<p><input type="text" th:field="*{age}" /></p>-->
+					
+<!--					<label>Birthday</label>-->
+<!--					<p><input type="text" th:field="*{birthday}" /></p>-->
+					
+<!--					<p><input type="submit" value="送信" id="button" /></p>-->
+<!--		</form>-->
+	</body>
+</html>

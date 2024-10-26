@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+p {
+	margin-top: 2px;
+	margin-bottom: 2px;	
+}
+
+.textbox {
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+.middleTite {
+	font-weight: 800;
+	text-decoration: underline;
+}
+
+.middleBlock {
+	margin-left: 10px;
+	margin-bottom: 10px;
+	display: flex;
+}
+
+.smallBlock {
+	width: 25%;
+}
+
+.button {
+	
+}
+
+.tdButton {
+	text-align: center;
+}
